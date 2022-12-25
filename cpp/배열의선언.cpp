@@ -1,11 +1,9 @@
 #include <stdio.h>
 
 int main(){
-    char cbuf[7] = {'s','t','u','d','y'}; //문자열
-    int ibuf[10]; //10칸짜리 배열의 선언
-
-    printf("%s\n", cbuf);
-    for(int i = 0; i < 10; i++){
-        printf("%d ", ibuf[i]);
-    } 
+    char cbuf1[6] = {'s','t','u','d','y', NULL}; //문자열
+    char cbuf2[6] = "study"; //문자열
+    char cbuf3[] = {'s','t','u','d','y'}; //문자열
+    int ibuf1[10]; // 정수 10칸짜리 배열의 선언
+    int ibuf2[10] = {0}; // 정수 10칸짜리 배열의 선언, 0으로 초기화
 }
