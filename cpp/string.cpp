@@ -1,14 +1,11 @@
 #include <iostream>
 #include <string>
+using namespace std;
 
 int main(){
-    std::string name_;
+    string name_; // string도 원래는 std에 속한다. 
+    // std::string name_;
 
-    std::cin >> name_;
-    std::cout << name_ << std::endl;
-
-    std::string introduce_ = "나는 ";
-    introduce_ += name_;
-
-    std::cout<< introduce_ << std::endl;
+    cin >> name_; // name에 문자열을 입력받는다.
+    cout << name_ << endl;
 }
