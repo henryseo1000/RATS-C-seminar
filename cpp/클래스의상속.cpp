@@ -6,34 +6,27 @@ class Fruit{
 public:
     Fruit(){
         
+    } // 생성자.
+    Fruit(string n, string c) : name_(n), color_(c) {
+    
     }
-    void introduce(){
-        cout << "나는 과일이에요!" << endl;
-    }
-    void eatingsound(){
-        cout << "냠냠" << endl;
-    }
+    string name_ = "과일"; //과일의 디폴트 이름은 "과일"
+    string color_ = "??"; // 과일의 색깔
 };
 
 class Apple : public Fruit{
 public :
-    Apple() : Fruit(){
-
-    }
-    void introduce() {
-        Fruit::introduce();
-        cout << "사과라고 해요!" << endl;
+    Apple() : Fruit(){ //자녀의 생성자를 호출할 때 반드시 부모의 생성자 호출 필요
+        name_ = "사과"; //생성자를 호출하면 이름과 색깔을 설정
+        color_ = "빨강"; 
     }
 };
 
-class Banana : public Fruit{
+class Banana : public Fruit{ //자녀의 생성자를 호출할 때 반드시 부모의 생성자 호출 필요
 public :
     Banana() : Fruit(){
-
-    }
-    void introduce() {
-        Fruit::introduce();
-        cout << "바나나라고 해요!" << endl;
+        name_ = "바나나"; //생성자를 호출하면 이름과 색깔을 설정
+        color_ = "노랑";
     }
 };
 
@@ -42,11 +35,5 @@ int main(){
     Apple a_;
     Fruit f_;
 
-    b_.introduce();
-    cout << endl;
-
-    a_.introduce();
-    cout << endl;
     
-    f_.introduce();
 }
