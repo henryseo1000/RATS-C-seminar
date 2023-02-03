@@ -1,24 +1,34 @@
 {
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "C/C++ Runner: Debug Session",
+      "name": "gcc.exe - Build and debug active file",
       "type": "cppdbg",
       "request": "launch",
+      "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
       "args": [],
       "stopAtEntry": false,
-      "externalConsole": true,
-      "cwd": "c:/Users/henry/OneDrive - 명지대학교/바탕 화면/c++교육 자료/C-seminar/cpp",
-      "program": "c:/Users/henry/OneDrive - 명지대학교/바탕 화면/c++교육 자료/C-seminar/cpp/build/Debug/outDebug",
+      "cwd": "C:MinGW\\bin", 
+      "environment": [],
+      "externalConsole": false,
       "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
+      "miDebuggerPath": "C:MinGW\\bin\\gdb.exe", 
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",
           "text": "-enable-pretty-printing",
           "ignoreFailures": true
+        },
+        {
+          "description": "Set Disassembly Flavor to Intel",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
         }
-      ]
+      ],
+      "preLaunchTask": "C/C++: gcc.exe build active file"
     }
   ]
 }
